@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Balance =10000;
+        var ch=Number(prompt("**ATM Machine** \n1:Check Balance \n2:Withdrawn \n3:Deposite \n4:Exit"));
+
+        switch(ch){
+            case 1:
+                document.write("<h1>Available Balance is: "+Balance+"</h1>");
+                break;
+
+            case 2:
+                var Withdrawn= Number(prompt("Enter Your Withdrawn Amount:"));
+                Balance=Balance-Withdrawn;
+                document.write("<h1>Withdrawn Succefully!!!!</h1>")
+                document.write("<h1>Available Balance is: "+Balance+"</h1>");
+                break;
+
+            case 3:
+                var Deposite=Number(prompt("Enter Your Deposite Amount:"))
+                Balance=Balance+Deposite;
+                document.write("<h1>Deposite Succefully!!!!</h1>")
+                document.write("<h1>Available Balance is: "+(Balance)+"</h1>");
+                break;
+
+            case 4:
+                document.write("<h1>Thank You</h1>");
+
+        }
+    </script>
+</body>
+</html>

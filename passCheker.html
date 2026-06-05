@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Password Checker:</h1>
+<script>
+
+    var pass = prompt("Enter Password");
+
+console.log(
+    (pass.length >= 8 &&
+     /[A-Z]/.test(pass) &&
+     /[0-9]/.test(pass) &&
+     /[@#$%]/.test(pass))
+    ? alert("Valid Password")
+    : alert("Invalid Password")
+);
+</script>
+</body>
+</html>

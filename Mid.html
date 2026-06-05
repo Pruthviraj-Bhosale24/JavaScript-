@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Middle Number</title>
+</head>
+<body>
+    <script>
+        var a = Number(prompt("Enter 1st Number"));
+        var b = Number(prompt("Enter 2nd Number"));
+        var c = Number(prompt("Enter 3rd Number"));
+
+        var mid = ((a > b && a < c) || (a < b && a > c))? a: (((b > a && b < c) || (b < a && b > c))? b: c);
+
+        console.log("Middle Number = " + mid);
+       
+    </script>
+</body>
+</html>
