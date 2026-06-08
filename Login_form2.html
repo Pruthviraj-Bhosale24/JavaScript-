@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <input type="text" id="user" placeholder="Enter Username">
+    <br><br>
+    <input type="password" id="pass" placeholder="Enter Password ">
+    <br>
+    <button onclick="getData()">LOGIN</button>
+    <h1 id="msg"></h1>
+
+
+
+   <script>
+    var username = "pruthvi";
+    var password = "pruthvi@123";
+    var attempts = 3;
+
+    function getData() {
+
+
+        var user = document.getElementById("user").value;
+        var pass = document.getElementById("pass").value;
+      
+    
+        if(username==user.value && password==pass.value){
+            msg.innerHTML="Login Successful!!"+"Welcome  "+a.value;
+        }
+        else{
+            if(attempts>0){
+            attempts--
+            }
+            if(attempts==0){
+                msg.innerHTML="System lock for 15  Minutes !!! Try Later!!"
+            }
+            else{
+                msg.innerHTML="Login Failed!!! Attempt Left:"+attempts
+            }
+        }
+        
+    }
+</script>
+
+</body>
+</html>

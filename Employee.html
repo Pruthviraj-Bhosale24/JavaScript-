@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Check</title>
+</head>
+ 
+<body>
+ 
+<input type="number" id="empid" placeholder="Enter Employee ID">
+<br><br>
+ 
+<input type="text" id="empname" placeholder="Enter Employee Name">
+<br><br>
+ 
+<label>Enter time:</label>
+<input type="time" id="time">
+ 
+<br><br>
+ 
+<button onclick="getData()">Submit</button>
+ 
+ 
+<h2 id="msg"></h2>
+<h3 id="emp_details"></h3>
+ 
+ 
+<script>
+ 
+function getData(){
+ 
+    var emp_ID = document.getElementById("empid")
+    var emp_Name = document.getElementById("empname")
+    var checkTime = document.getElementById("time")
+    var time = checkTime.value
+    var msg= document.getElementById("msg")
+    var details=document.getElementById("emp_details")
+    var greeting;
+ 
+ 
+    if(time >= "05:00" && time < "12:00")
+    {
+        greeting ="Hello "+emp_Name.value+",Good Morning!!"
+    }
+    else if(time >= "12:00" && time < "17:00")
+    {
+        greeting = "Hello "+emp_Name.value+",Good Afternoon!!"
+    }
+    else if(time >= "17:00" && time < "21:00")
+    {
+        greeting = "Hello "+emp_Name.value+",Good Evening!!"
+    }
+    else
+    {
+        greeting = "Hello "+emp_Name.value+",Good Night!!"
+    }
+ 
+    msg.innerHTML = greeting;
+    emp_details.innerHTML =
+    "Employee ID: " + emp_ID.value +
+    "<br>Employee Name: " + emp_Name.value +
+    "<br>Check In Time: " + checkTime.value
+ 
+}
+ 
+</script>
+ 
+ 
+</body>
+</html>
