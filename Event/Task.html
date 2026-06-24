@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Signal</title>
+    <style>
+        body{
+            text-align:center;
+            font-family:Arial;
+            margin-top:30px;
+        }
+
+        .signal{
+            width:100px;
+            
+            padding:10px;
+            margin:20px auto;
+            border-radius:10px;
+        }
+
+        .light{
+            width:60px;
+            height:60px;
+            background:gray;
+            border-radius:50%;
+            margin:10px auto;
+        }
+
+        button{
+            padding:10px 20px;
+            margin:5px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Traffic Signal</h1>
+
+    <div class="signal">
+        <div class="light" id="red"></div>
+        <div class="light" id="yellow"></div>
+        <div class="light" id="green"></div>
+    </div>
+
+    <button id="redBtn">Red</button>
+    <button id="yellowBtn">Yellow</button>
+    <button id="greenBtn">Green</button>
+
+    <script>
+        let red = document.getElementById("red");
+        let yellow = document.getElementById("yellow");
+        let green = document.getElementById("green");
+
+        function resetLights(){
+            red.style.background = "gray";
+            yellow.style.background = "gray";
+            green.style.background = "gray";
+        }
+
+        document.getElementById("redBtn").addEventListener("click", function(){
+            resetLights();
+            red.style.background = "red";
+        });
+
+        document.getElementById("yellowBtn").addEventListener("click", function(){
+            resetLights();
+            yellow.style.background = "yellow";
+        });
+
+        document.getElementById("greenBtn").addEventListener("click", function(){
+            resetLights();
+            green.style.background = "green";
+        });
+    </script>
+
+</body>
+</html>

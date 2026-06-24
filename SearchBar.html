@@ -3,20 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tech Store</title>
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(to right,#f0f7ff,#e0ecff);
+    padding:20px;
+}
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#1e3a8a;
+    font-size:2.8rem;
+    font-weight:700;
+}
+
+.controls{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+#searchBar{
+    flex:1;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+#sortPrice{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+#productContainer{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+#productContainer img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+   
+#productContainer div{
+    width:250px;
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    transition:0.3s;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+
+
+button{
+    padding:10px 20px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+
+    </style>
 </head>
 <body>
-    <div class="container">
 
-        <h1>Shopping Website</h1>
+    <div class="controls">
+        <h1>Tech Store</h1>
+    <input type="text" id="searchBar" placeholder="Search here...">
 
-        <input type="text"
-               id="searchBar"
-               placeholder=" Search Products..."
-               onkeyup="searchProducts()">
-
-        <div id="products"></div>
-
+    <select id="sortPrice">
+        <option value="">Sort By Price</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+    </select>
     </div>
+
+    <div id="productContainer"></div>
+
+    <script>
+
+        let container = document.getElementById("productContainer");
+        let search = document.getElementById("searchBar");
+        let sortPrice = document.getElementById("sortPrice");
+
+        let products = [
+
+{
+    pname: "Gaming Keyboard",
+    cname: "Redragon",
+    price: 2999,
+    img: "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=500",
+},
+
+{
+    pname: "Gaming Mouse",
+    cname: "Logitech",
+    price: 1499,
+    img: "https://images.unsplash.com/photo-1527814050087-3793815479db?w=500"
+},
+
+{
+    pname: "Monitor",
+    cname: "Samsung",
+    price: 12999,
+    img: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500"
+},
+
+{
+    pname: "Headphones",
+    cname: "JBL",
+    price: 2499,
+    img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500"
+},
+
+{
+    pname: "SSD",
+    cname: "Western Digital",
+    price: 3999,
+    img: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=500"
+},
+
+{
+    pname: "Webcam",
+    cname: "HP",
+    price: 1999,
+    img: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=500"
+}
+
+];
+
+        function display(list) {
+
+            container.innerHTML = "";
+
+            list.forEach((product) => {
+
+                let div = document.createElement("div");
+
+                div.innerHTML = `
+                    <img src="${product.img}" width="200">
+                    <h3>${product.pname}</h3>
+                    <p>${product.cname}</p>
+                    <p><strong>₹${product.price}</strong></p>
+                    <button>Buy Now</button>
+                    
+                `;
+
+                container.appendChild(div);
+
+            });
+
+        }
+
+        display(products);
+
+        search.addEventListener("input", () => {
+
+            let searchval = search.value.toLowerCase();
+
+            let filtered = products.filter((pr) => {
+                return pr.pname.toLowerCase().includes(searchval);
+            });
+
+            display(filtered);
+
+        });
+
+        sortPrice.addEventListener("change", () => {
+        let sortedProducts = [...products];
+        if (sortPrice.value === "low") {
+            sortedProducts.sort((a, b) => a.price - b.price);
+        }
+        else if (sortPrice.value === "high") {
+            sortedProducts.sort((a, b) => b.price - a.price);
+        }
+
+            display(sortedProducts);
+        });
+
+    </script>
+
 </body>
 </html>
