@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Logo</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#222;
+}
+
+.instagram{
+    width:250px;
+    height:250px;
+    background:linear-gradient(
+        45deg,
+        #f09433,
+        #e6683c,
+        #dc2743,
+        #cc2366,
+        #bc1888
+    );
+    border-radius:60px;
+    position:relative;
+}
+
+.instagram::before{
+    content:"";
+    width:180px;
+    height:180px;
+    border:12px solid white;
+    border-radius:50px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.camera{
+    width:130px;
+    height:130px;
+    border:12px solid white;
+    border-radius:50%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.dot{
+    width:25px;
+    height:25px;
+    background:white;
+    border-radius:50%;
+    position:absolute;
+    top:45px;
+    right:45px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="instagram">
+    <div class="camera"></div>
+    <div class="dot"></div>
+</div>
+
+</body>
+</html>

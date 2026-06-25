@@ -1,0 +1,90 @@
+body{
+    background:#eee;
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.leaf{
+    width:150px;
+    height:150px;
+    background:skyblue;
+    border-radius:0 100%;
+    text-align:center;
+    line-height:50px;
+    color:white;
+    font-size:25px;
+}
+
+.halfoval{
+    width:300px;
+    height:150px;
+    background:blue;
+    border-radius:0 0 150px 150px;
+    text-align:center;
+    color:white;
+    padding-top:20px;
+}
+
+.oval{
+    width:300px;
+    height:150px;
+    background:orange;
+    border-radius:50%;
+    text-align:center;
+    color:white;
+    padding-top:20px;
+}
+
+.twist{
+    width:300px;
+    height:150px;
+    background:green;
+    border-radius:100% 0;
+    text-align:center;
+    color:white;
+    padding-top:20px;
+}
+
+.twist2{
+    width:350px;
+    height:150px;
+    background:purple;
+    border-radius:0 100px 0 100px;
+    text-align:center;
+    color:white;
+    padding-top:20px;
+}
+
+.circle{
+    width:150px;
+    height:150px;
+    background:magenta;
+    border-radius:50%;
+    text-align:center;
+    color:white;
+    line-height:150px;
+}
+
+.tab{
+    width:150px;
+    height:150px;
+    background:skyblue;
+    border-radius:0 0 80px 80px;
+    text-align:center;
+    color:white;
+    padding-top:20px;
+}
+
+.three{
+    width:150px;
+    height:150px;
+    background:blue;
+    border-radius:0 50px 80px 80px;
+    text-align:center;
+    color:white;
+    padding-top:20px;
+}

@@ -1,0 +1,48 @@
+
+
+.box{
+    width: 900px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    background: white;
+    box-shadow:0 0 10px gray;
+}
+
+.left{
+    width:35%;
+    background:#2874f0;
+    color:white;
+    padding:40px;
+}
+
+
+.right{
+    width:65%;
+    padding:40px;
+}
+
+input{
+    width:100%;
+    border:none;
+    border-bottom:2px solid #2874f0;
+    padding:10px;
+    margin-top:30px;
+}
+
+button{
+    width:100%;
+    background:#fb641b;
+    color:white;
+    margin-top:30px;
+}
+
+h3{
+    text-align:center;
+    margin-top:250px;
+    color:#2874f0;
+}
+
+
+
+
