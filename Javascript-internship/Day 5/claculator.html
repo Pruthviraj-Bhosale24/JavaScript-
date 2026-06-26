@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+<script>
+    var a = Number(prompt("Enter First Number"));
+    var b = Number(prompt("Enter Second Number"));
+    var op = prompt("Enter Operator (+,-,*,/)");
+
+    switch(op)
+    {
+        case "+":
+            document.write("<h1>Result = " + (a+b)+"</h1>");
+            break;
+
+        case "-":
+               document.write("<h1>Result = " + (a-b)+"</h1>")
+               break;
+
+        case "*":
+            document.write("<h1>Result = " + (a*b)+"</h1>");
+            break;
+
+        case "/":
+            document.write("<h1>Result = " + (a/b)+"</h1>");
+            break;
+
+        default:
+            document.write("<h1>Invalid Operator");
+    }
+</script>
+</body>
+</html>

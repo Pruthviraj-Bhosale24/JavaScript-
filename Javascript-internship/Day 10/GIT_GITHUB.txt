@@ -1,0 +1,19 @@
+# Day 10 - Git & GitHub
+
+Date: 10 June
+
+## Today's Learning
+
+- Introduction to Git
+- Introduction to GitHub
+- Git installation
+- Repository concept
+- git init
+- git add
+- git commit
+- git push
+- Working with remote repository
+
+## Practice
+
+Created and managed GitHub repository.

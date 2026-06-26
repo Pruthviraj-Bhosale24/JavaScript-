@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Switch Case Program</title>
+</head>
+<body>
+
+<script>
+
+var choice = Number(prompt(
+"1. Check Positive Number\n" +
+"2. Check Even Number\n" +
+"3. Check Divisible by 5\n\n" +
+"Enter Your Choice:"
+));
+
+switch(choice)
+{
+    case 1:
+        var num = parseInt(prompt("Enter Number"));
+
+        if(num > 0)
+            document.write("Positive Number");
+        else
+            document.write("Not Positive Number");
+        break;
+
+    case 2:
+        var num = parseInt(prompt("Enter Number"));
+
+        if(num % 2 == 0)
+            document.write("Even Number");
+        else
+            document.write("Odd Number");
+        break;
+
+    case 3:
+        var num = parseInt(prompt("Enter Number"));
+
+        if(num % 5 == 0)
+            document.write("Divisible by 5");
+        else
+            document.write("Not Divisible by 5");
+        break;
+
+    default:
+        document.write("Invalid Choice");
+}
+
+</script>
+
+</body>
+</html>

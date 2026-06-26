@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Menu</title>
+</head>
+<body>
+<script>
+    var choice = parseInt(prompt(
+        "1. Pizza\n2. Burger\n3. Sandwich\n4. Dosa\n\nEnter Choice"
+    ));
+
+    switch(choice)
+    {
+        case 1:
+            document.write("<h1>Pizza - Rs.200</h1>");
+            break;
+
+        case 2:
+            document.write("<h1>Burger - Rs.100</h1>");
+            break;
+
+        case 3:
+            document.write("<h1>Sandwich - Rs.80</h1>");
+            break;
+
+        case 4:
+            document.write("<h1>Dosa - Rs.120</h1>");
+            break;
+
+        default:
+            document.write("<h1>Invalid Choice</h1>");
+    }
+</script>
+</body>
+</html>
