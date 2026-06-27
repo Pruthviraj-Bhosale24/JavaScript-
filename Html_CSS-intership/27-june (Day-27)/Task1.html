@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flex Cards</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:wheat
+}
+
+.container{
+    width:700px;
+}
+
+h2{
+    color:black;
+    margin-bottom:15px;
+}
+
+.row{
+    display:flex;
+}
+
+.card{
+    width:33.33%;
+    height:180px;
+    background:white;
+    border:1px solid #ddd;
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+}
+
+.circle{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:lightgray;
+}
+
+.card:hover{
+    transform:translateY(-1px);
+    transition: 0.4s;
+      box-shadow:
+        0 0 20px rgba(255, 140, 105, 0.6),
+        0 0 40px rgba(255, 127, 80, 0.4);
+}
+
+.card:hover .circle{
+    background:linear-gradient(purple,pink);
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Blablabla</h2>
+
+    <div class="row">
+        <div class="card">
+            <div class="circle"></div>
+            <p>Section 1</p>
+            <p>Lorem ipsum</p>
+        </div>
+
+        <div class="card active">
+            <div class="circle"></div>
+            <p>Section 2</p>
+            <p>Lorem ipsum</p>
+        </div>
+
+        <div class="card">
+            <div class="circle"></div>
+            <p>Section 3</p>
+            <p>Lorem ipsum</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card">
+            <div class="circle"></div>
+            <p>Section 4</p>
+            <p>Lorem ipsum</p>
+        </div>
+
+        <div class="card">
+            <div class="circle"></div>
+            <p>Section 5</p>
+            <p>Lorem ipsum</p>
+        </div>
+
+        <div class="card">
+            <div class="circle"></div>
+            <p>Section 6</p>
+            <p>Lorem ipsum</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

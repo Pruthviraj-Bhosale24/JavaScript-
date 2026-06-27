@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>docu</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+.container{
+    width:756px;
+    margin:50px auto;
+    font-size:0;
+}
+
+.box{
+    width:250px;
+    height:250px;
+    background:white;
+    display:inline-block;
+    border:1px solid #ececec;
+    position:relative;
+    transition:0.4s;
+    font-size:16px;
+    vertical-align:top;
+}
+
+.circle{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:#e5e5e5;
+    position:absolute;
+    top:35px;
+    left:75px;
+
+}
+
+.text{
+    width:100%;
+    position:absolute;
+    top:150px;
+    text-align:center;
+}
+
+.text h3{
+    font-size:22px;
+    margin-bottom:5px;
+}
+
+.text p{
+    color:gray;
+}
+
+.box:hover{
+    transform:scale(1.15);
+    z-index:1;
+    box-shadow:0 20px 35px rgba(255,100,100,.45);
+}
+
+.box:hover .circle{
+    background:linear-gradient(to bottom,
+    #e76d7d,
+    #d35f79,
+    #a45277,
+    #69406f,
+    #3c2d69);
+}
+
+.box:hover .text h3{
+    color:#ff6b81;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="box">
+    <div class="circle"></div>
+    <div class="text">
+        <h3>Section 1</h3>
+        <p>Lorem Ipsum</p>
+    </div>
+</div>
+
+<div class="box">
+    <div class="circle"></div>
+    <div class="text">
+        <h3>Section 2</h3>
+        <p>Lorem Ipsum</p>
+    </div>
+</div>
+
+<div class="box">
+    <div class="circle"></div>
+    <div class="text">
+        <h3>Section 3</h3>
+        <p>Lorem Ipsum</p>
+    </div>
+</div>
+
+<div class="box">
+    <div class="circle"></div>
+    <div class="text">
+        <h3>Section 4</h3>
+        <p>Lorem Ipsum</p>
+    </div>
+</div>
+
+<div class="box">
+    <div class="circle"></div>
+    <div class="text">
+        <h3>Section 5</h3>
+        <p>Lorem Ipsum</p>
+    </div>
+</div>
+
+<div class="box">
+    <div class="circle"></div>
+    <div class="text">
+        <h3>Section 6</h3>
+        <p>Lorem Ipsum</p>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
