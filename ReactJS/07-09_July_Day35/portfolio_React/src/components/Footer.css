@@ -1,0 +1,37 @@
+/* src/components/Footer/Footer.css */
+
+.footer{
+  background:#0b0d11;
+  text-align:center;
+  padding:50px 20px;
+}
+
+.footer h3{
+  color:#d4a373;
+  margin-bottom:10px;
+}
+
+.footer p{
+  color:#94a3b8;
+}
+
+.socials{
+  margin:25px 0;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+}
+
+.socials a{
+  color:white;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.socials a:hover{
+  color:#d4a373;
+}
+
+.copyright{
+  margin-top:20px;
+}
