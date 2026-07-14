@@ -40,7 +40,7 @@ export default function Task() {
 
             <form onSubmit={handleSubmit}>
 
-                <h1>User Form</h1>
+                <h1>Login Form</h1>
 
                 <input
                     type="text"
@@ -82,34 +82,25 @@ export default function Task() {
                 </button>
 
             </form>
-
-
+            
             {
                 data &&
-
                 <div className="result">
-
                     <h2>Submitted Data</h2>
-
                     <p>
                         <b>Name:</b> {data.name}
                     </p>
-
                     <p>
                         <b>Email:</b> {data.email}
                     </p>
-
                     <p>
                         <b>City:</b> {data.city}
                     </p>
-
                     <p>
                         <b>Mobile:</b> {data.mobile}
                     </p>
-
                 </div>
             }
-
         </div>
     );
 }
