@@ -2,7 +2,7 @@ const input = document.getElementById("user-input");
 const btn = document.getElementById("sent-btn");
 const chatBox = document.getElementById("chat-box");
 
-const apiKey = "YOUR_API_KEY";
+const apiKey = "my_key";
 
 btn.addEventListener("click", sendMessage);
 
