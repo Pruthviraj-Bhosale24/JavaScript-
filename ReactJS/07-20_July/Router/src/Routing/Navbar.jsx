@@ -10,9 +10,9 @@ const Navbar = () => {
   return (
     <BrowserRouter>
   
-  <nav className="bg-orange-100 shadow-md p-4">
+  <nav className="bg-orange-100 shadow-md p-4 ">
     <div className="max-w-6xl mx-auto flex justify-between items-center">
-      <h1 className="text-3xl font-bold text-amber-800 "> Linkcode</h1>
+      <h1 className="text-3xl font-bold text-amber-800"> Linkcode</h1>
 
       <ul className="flex gap-8 text-lg">
         <li className="hover:text-orange-600 "><a href="/">Home</a> </li>
