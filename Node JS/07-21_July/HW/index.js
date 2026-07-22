@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 });
 
 function menu() {
-  console.log("\n===== STUDENT MANAGEMENT =====");
+  console.log("\n====== STUDENT MANAGEMENT ======");
   console.log("1. Insert Student");
   console.log("2. Display Students");
   console.log("3. Update Student");
