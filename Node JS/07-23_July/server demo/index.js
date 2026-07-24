@@ -1,30 +1,31 @@
-// const http = require('http');
-// const port = 3000;
+const express = require("express");
+const mongoose = require("mongoose");
 
-// const server = http.createServer((req, res) => {
-//     res.setHeader("Content-Type", "text/html");
-//     res.end("<h1>Hello from Node js</h1>");
-// });
-
-// server.listen(port, () => {
-//     console.log(`Server is listening on port ${port}`);
-// });
-
-
-
-
-const express = require('express');
 const app = express();
 
-app.get("/",(req,res)=>{
-    res.send("Hello form express js")
-})
+app.use(express.json());
 
-app.get("/home",(req,res)=>{
-    res.send("Home Pagee")
-})
+mongoose.connect(
+  "mongodb+srv://bpruthviraj248_db_user:P9nPsKS2uNNDnanH@demo2.f3nr1k0.mongodb.net/studentDB?retryWrites=true&w=majority&appName=demo2"
+)
+  .then(() => {
+    console.log("✅ Database Connected");
+  })
+  .catch((err) => {
+    console.log("❌ Database Connection Error");
+    console.error(err);
+  });
 
-app.listen(2000,()=>{
-    console.log("server is listening on port 2000");
-    
-})
+app.get("/", (req, res) => {
+  res.send("Hello from Express.js");
+});
+
+app.get("/home", (req, res) => {
+  res.send("Welcome to Home Page");
+});
+
+const PORT = 5000;
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server is listening on port ${PORT}`);
+});
