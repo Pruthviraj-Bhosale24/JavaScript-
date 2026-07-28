@@ -1,7 +1,12 @@
 const express = require("express");
+const router = require('./router/bookroute');
 const app = express();
-const database= require("./databse")
+const database= require("./database")
 
+database();
+
+
+app.use("/book",router)
 
 app.get("/book",(req,res)=>{
     res.send("Building book management app ");
