@@ -5,7 +5,7 @@ const schema=new mongoose.Schema({
         type:String,
         required:true
     },
-    bookAuther:{
+    bookAuthor:{
         type:String,
         required:true
     },

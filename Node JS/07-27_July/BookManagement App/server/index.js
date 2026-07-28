@@ -1,19 +1,16 @@
 const express = require("express");
-const router = require('./router/bookroute');
+const databaseConnection = require("./database");
+
 const app = express();
-const database= require("./database")
 
-database();
+const router = require("./router/bookroute");
 
+databaseConnection();
 
-app.use("/book",router)
+app.use(express.json());
 
-app.get("/book",(req,res)=>{
-    res.send("Building book management app ");
-})
+app.use("/book", router);
 
-app.listen(2000,()=>{
-    console.log(`Server is listening on port http://localhost:2000`);
-})
-
-database()
+app.listen(3000, () => {
+    console.log("Server running on port 3000");
+});
