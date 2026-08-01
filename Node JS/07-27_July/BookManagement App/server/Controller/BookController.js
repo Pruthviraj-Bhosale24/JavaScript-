@@ -30,7 +30,7 @@ const  handleDeleteBookController = async(req,res)=>{
         const deleted= await book.deleteOne({_id:data._id})
         console.log("Book deleted");
         
-        return res.status(200).json({message:"Book Deleted..."})
+        return res.status(200).json({message:"Book Deleted...."})
     }catch(err){
           return res.status(500).json({message:err.message})
     }
