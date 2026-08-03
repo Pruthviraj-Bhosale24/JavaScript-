@@ -1,0 +1,14 @@
+$kind: http-request
+name: New Request
+url: http://localhost:3000/book/deleteBook
+method: DELETE
+body:
+  type: json
+  content: "{\r
+
+    \   \r
+
+    \"_id\" :\"6a690291617bb06c8a969dd2\"\r
+
+    }"
+order: 2641210896045173
