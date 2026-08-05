@@ -1,6 +1,8 @@
 const book = require("../Model/book");
 const Book = require("../Model/book");
 
+
+//add Books 
 const handleAddBookController = async (req, res) => {
     try {
         await Book.create(req.body);
@@ -22,12 +24,11 @@ const handlegetAllBookController= async(req,res)=>{
 }
 
 
-
 //delete books
 const  handleDeleteBookController = async(req,res)=>{
     try{
         const data = req.body
-        const deleted= await book.deleteOne({_id:data._id})
+        const deleted = await book.deleteOne({ _id: req.body._id });
         console.log("Book deleted");
         
         return res.status(200).json({message:"Book Deleted....."})
@@ -35,4 +36,26 @@ const  handleDeleteBookController = async(req,res)=>{
           return res.status(500).json({message:err.message})
     }
 }
-module.exports = { handleAddBookController, handlegetAllBookController , handleDeleteBookController };
+
+//update Books
+const handleUpdateBookController = async (req, res) => {
+  try {
+    const { _id, ...updatedData } = req.body;
+
+    const updatedBook = await book.updateOne(
+      { _id },
+      { $set: updatedData }
+    );
+
+    return res.status(200).json({
+      message: "Book Updated Successfully",
+      updatedBook,
+    });
+  } catch (err) {
+    return res.status(500).json({
+      message: err.message,
+    });
+  }
+};
+
+module.exports = { handleAddBookController, handlegetAllBookController , handleDeleteBookController , handleUpdateBookController};

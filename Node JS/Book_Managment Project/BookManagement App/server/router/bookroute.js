@@ -1,5 +1,5 @@
 const express = require("express");
-const { handleAddBookController, handlegetAllBookController, handleDeleteBookController } = require("../Controller/BookController");
+const { handleAddBookController, handlegetAllBookController, handleDeleteBookController, handleUpdateBookController } = require("../Controller/BookController");
 
 const router = express.Router();
 
@@ -10,6 +10,7 @@ router.get("/msg", (req, res) => {
 router.post("/addBook", handleAddBookController);
 router.get("/getBook", handlegetAllBookController)
 router.delete("/deleteBook", handleDeleteBookController)
+router.put("/updatedBook", handleUpdateBookController)
 
 
 
