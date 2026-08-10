@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Copy, Check, Edit2, Trash2, Calendar, Tag, User, Hash, Book } from "lucide-react";
 
-const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1544947950-fa07a98d237f";
+const FALLBACK_IMAGE = "https://i.ibb.co/ny7xQBJ/aryan-pro.jpg"
 
 function BookCard({ book, onSelectEdit, onSelectDelete }) {
   const [copied, setCopied] = useState(false);

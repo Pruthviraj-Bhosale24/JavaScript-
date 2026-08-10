@@ -14,7 +14,7 @@ function Home() {
   // Modal control state
   const [modalState, setModalState] = useState({
     isOpen: false,
-    mode: "add", // 'add' | 'edit' | 'delete'
+    mode: "add", 
     bookId: "",
   });
 
@@ -33,7 +33,6 @@ function Home() {
     setLoading(true);
     try {
       const response = await baseBookURL.get("/getBook");
-      // Handle both { booklist: [...] } and direct array [...] responses
       if (response.data && response.data.booklist) {
         setBooks(response.data.booklist);
       } else if (Array.isArray(response.data)) {
@@ -122,7 +121,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-[#F8F4EF] text-[#4A3525] flex flex-col font-sans selection:bg-[#D9B99B]/50 selection:text-[#3D2817]">
       
-      {/* Toast Notification */}
+
       {toast.show && (
         <div className="fixed bottom-6 right-6 z-50 animate-bounce">
           <div
@@ -142,17 +141,17 @@ function Home() {
         </div>
       )}
 
-      {/* Main Header Component */}
+   
       <Header
         onOpenAdd={handleOpenAdd}
         onOpenEdit={() => handleOpenEdit()}
         onOpenDelete={() => handleOpenDelete()}
       />
 
-      {/* Main Container */}
+      
       <main className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         
-        {/* Dashboard Welcome & Stats */}
+
         <div className="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h2 className="text-3xl font-extrabold text-[#3D2817] tracking-tight flex items-center gap-2">
@@ -174,10 +173,10 @@ function Home() {
           </button>
         </div>
 
-        {/* Stats Component */}
+        
         <Stats books={books} />
 
-        {/* Search Bar Section */}
+       
         <div className="my-6 relative">
           <div className="relative flex items-center">
             <Search className="w-5 h-5 text-[#8B5E3C] absolute left-4 pointer-events-none" />
@@ -207,7 +206,7 @@ function Home() {
           )}
         </div>
 
-        {/* Loading Spinner State */}
+        
         {loading ? (
           <div className="py-20 flex flex-col items-center justify-center text-center">
             <div className="w-16 h-16 rounded-2xl bg-[#6F4E37]/10 flex items-center justify-center mb-4 border border-[#D9B99B]/40">
@@ -217,7 +216,7 @@ function Home() {
             <p className="text-xs text-[#8B5E3C] mt-1">Connecting with API endpoint GET /getBook</p>
           </div>
         ) : filteredBooks.length === 0 ? (
-          /* Empty State Screen */
+         
           <div className="py-16 px-4 my-6 bg-[#FFF8F0] border border-dashed border-[#D9B99B] rounded-3xl text-center flex flex-col items-center justify-center max-w-lg mx-auto shadow-sm">
             <div className="w-20 h-20 rounded-full bg-[#F5E6D3] flex items-center justify-center text-[#8B5E3C] mb-4">
               <BookX className="w-10 h-10" />
@@ -238,7 +237,7 @@ function Home() {
             </button>
           </div>
         ) : (
-          /* Responsive Book Card Grid */
+        
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-6">
             {filteredBooks.map((book, index) => (
               <BookCard
@@ -253,14 +252,13 @@ function Home() {
 
       </main>
 
-      {/* Footer */}
+      
       <footer className="bg-[#6F4E37]/10 border-t border-[#E8DCCB] py-6 text-center text-xs text-[#8B5E3C] mt-auto">
         <div className="max-w-7xl mx-auto px-4">
-          <p>© {new Date().getFullYear()} Frontend Book Management System • Powered by React JS, Tailwind CSS & Axios</p>
+          <p>© {new Date().getFullYear()} Book Management System • Pruthvi Bhosale</p>
         </div>
       </footer>
 
-      {/* Book Operational Modal */}
       <BookModal
         isOpen={modalState.isOpen}
         mode={modalState.mode}
