@@ -18,14 +18,14 @@ export default function Form() {
             <form onSubmit={getSubmit}>
                 <input
                     type="text"
-                    placeholder="Enter your name"
+                    placeholder="Enter your name.."
                     value={user}
                     onChange={handleChange}
                 />
 
                 <input
                     type="password"
-                    placeholder="Enter your password"
+                    placeholder="Enter your password.."
                 />
 
                 <input type="submit" value="LOGIN" />
